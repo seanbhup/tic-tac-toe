@@ -5,13 +5,34 @@
 	margin: auto;
 }
 
+#title{
+	font-size: 50px;
+	font-weight: bold;
+	font-family: helvetica;
+	margin-right: 40px;
+	color: #ba2f5f;
+}
+
+#message{
+	font-size: 18px;
+	font-weight: bold;
+	font-family: helvetica;
+	color: #ba2f5f;
+}
+
 .square{
 	width: 30%;
-	background-color: #588674;
-	color: blue;
+	background-color: #518898;
+	color: #fbb034;
 	padding: 30px;
 	box-sizing: border-box;
 	float: left;
-	font-size: 80px;
+	font-size: 90px;
 	border: 2px solid white;
+	font-family: helvetica;
+}
+
+.winning-square{
+	background-color: #aad400 !important;
+	color: #ba2f5f !important;
 }
