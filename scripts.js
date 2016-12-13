@@ -29,7 +29,10 @@ var winningCombos = [
 
 console.log(winningCombos);
 
-
+$(".square").click(function(){
+	$(this).addClass("rotate-square");
+	markSquare(this)
+})
 
 function markSquare(currentSquare){
 	// console.log(currentSquare.id);
@@ -57,24 +60,25 @@ function markSquare(currentSquare){
 	}
 }
 
-function onePlayerGame(){
-	computerPlayer = true;
-}
+// function onePlayerGame(){
+// 	computerPlayer = true;
+// }
 
-function computerMove(){
-	// Go find a random square
-	var squareButtons = document.getElementsByClassName("square");
-	while(needASquare){
-		var randomNumber = (Math.ceil(Math.random() * 8)) + 1;
-		var randomSquare = squareButtons[randomNumber];
-		markSquare(randomSquare);
-		isTaken = markSquare(randomSquare);
-		console.log(isTaken);
-		if(isTaken !== "taken"){
-			needASquare = false;
-		}
-	}
-}
+// //makings of computer player
+// function computerMove(){
+// 	// Go find a random square
+// 	var squareButtons = document.getElementsByClassName("square");
+// 	while(needASquare){
+// 		var randomNumber = (Math.ceil(Math.random() * 8)) + 1;
+// 		var randomSquare = squareButtons[randomNumber];
+// 		markSquare(randomSquare);
+// 		isTaken = markSquare(randomSquare);
+// 		console.log(isTaken);
+// 		if(isTaken !== "taken"){
+// 			needASquare = false;
+// 		}
+// 	}
+// }
 
 function checkWin(whoJustWent, currentPlayerSquares){
 	// Outer loop
@@ -105,6 +109,12 @@ function gameOver(whoJustWon, winningCombo){
 		document.getElementById(winningCombo[i]).className += " winning-square";
 	}
 	someoneWon = true;
+		if(someoneWon = true){
+			$("#message").addClass("skew-message")
+			$("#board").addClass("winning")
+			$(".square").addClass("base")
+			$("#title").addClass("new-title")
+		}
 }
 
 

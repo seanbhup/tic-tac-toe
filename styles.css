@@ -15,6 +15,8 @@
 
 #message{
 	font-size: 18px;
+	height: 50px;
+	margin-top: 125px;
 	font-weight: bold;
 	font-family: helvetica;
 	color: #ba2f5f;
@@ -32,7 +34,85 @@
 	font-family: helvetica;
 }
 
+.square:hover{
+	background-color: #ff004d;
+	border-radius: 50%;
+	transition: all 4s;
+	/* transform: rotateY(5deg);
+	transition: all 3s; */
+}
+
+.rotate-square{
+	transform: rotateY(2160deg);
+	transition: all 4s ease-out;
+	border-radius: 50%;
+}
+
+.skew-message{
+	transform: scale(4) rotate(1080deg);
+	transition: all 2s;
+}
+
+.winning{
+	transform: rotate(1080deg);
+	transition: all 2s;
+}
+
+.new-title{
+	transform: rotate(2160deg);
+	transition: all 100s;
+	/* animation: title-rotate 50s infinite; */
+}
+
 .winning-square{
 	background-color: #aad400 !important;
 	color: #ba2f5f !important;
+	background-image: url("base.png") !important;
+	animation: color-change .1s infinite;
+	color: black;
 }
+
+@-webkit-keyframes color-change{
+	0% {opacity: 0;}
+	100% {opacity: 1;}
+}
+
+@keyframes color-change{
+	0%{
+		background-color: #518898;
+	}
+	30%{
+		background-color: #7dd49a;
+	}
+	60%{
+		background-color: #ff004d;
+	}
+	100%{
+		background-color: #fddb10;
+	}
+}
+
+/* @-webkit-keyframes title-rotate{
+	0% {opacity: 0;}
+	100% {opacity: 1;}
+} */
+
+/* @keyframes title-rotate{
+	0%{
+		transform: rotate(360deg);
+		transition: all 50s ease-out
+	}
+	30%{
+		transform: rotate(360deg);
+		transition: all 50s ease-out;
+	}
+	60%{
+		transform: rotate(360deg);
+		transition: all 50s ease-out;
+	}
+	100%{
+		transform: rotate(360deg);
+		transition: all 50s ease-out;
+	}
+}
+ */
