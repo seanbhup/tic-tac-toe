@@ -47,16 +47,16 @@ function markSquare(currentSquare){
 			whosTurn = 2
 			player1Squares.push(currentSquare.id);
 			checkWin(1, player1Squares);
-			if(computerPlayer){
-				computerMove();
-			}
+			// if(computerPlayer){
+			// 	computerMove();
+			// }
 		}else{
 			currentSquare.innerHTML = "O";
 			whosTurn = 1
 			player2Squares.push(currentSquare.id);
 			checkWin(2, player2Squares);
 		}
-		
+
 	}
 }
 
@@ -104,7 +104,7 @@ function checkWin(whoJustWent, currentPlayerSquares){
 
 function gameOver(whoJustWon, winningCombo){
 	var message = "Congrats to Player " + whoJustWon + ". You just won with " + winningCombo + "!!!!";
-	document.getElementById("message").innerHTML = message; 
+	document.getElementById("message").innerHTML = message;
 	for (var i = 0; i < winningCombo.length; i++) {
 		document.getElementById(winningCombo[i]).className += " winning-square";
 	}
@@ -118,16 +118,9 @@ function gameOver(whoJustWon, winningCombo){
 }
 
 
-// 1a. reset button write same thing basically that resets the dom and all global variables 
+// 1a. reset button write same thing basically that resets the dom and all global variables
 	// (player1Squares and player2Squares) and someoneWon.
 // 1b. write a loop to change inner html to &NBSP;
 
 // 2a. write computer player as player 2
 // 2b. make the computer try to win
-
-
-
-
-
-
-
