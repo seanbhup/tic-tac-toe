@@ -27,7 +27,7 @@ var winningCombos = [
 	["A3", "B2", "C1"] //diag2
 	];
 
-console.log(winningCombos);
+// console.log(winningCombos);
 
 $(".square").click(function(){
 	$(this).addClass("rotate-square");
